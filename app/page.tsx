@@ -32,11 +32,12 @@ export default function Home() {
         <p className="flex items-center justify-center bg-[#121212] text-[13px]  font-bold w-[200px] h-[30px] text-white  rounded-[20px] ">edncrj ejjed ejff ejjedjd </p>
         <h4 className="text-[80px] font-bold">e ef ejjedjd ejccee <span className="text-[#3CFF9C]">ejjej</span> ejejjejee ejejeeejee ememeeefda</h4>
         <p className="text-[25px] font-normal">ednedncrj ejjed jejs cejff ejjej ejejjejee ejejeeejee ememeeefdaejjejee ejejeeejee ememeeefda</p>
-<a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email&next={{ .RedirectTo }}">
+  <Link href="/dashboard">
   <button className="mt-10 font-bold bg-[#3CFF9C] text-black h-[40px] w-[120px] rounded-[20px]">
     get started
   </button>
-</a>      </div>
+</Link>
+   </div>
 
       
       
