@@ -20,23 +20,26 @@ export default function Home() {
         <h1 className="font-semibold text-[40px]">Evograph</h1>
       </div>
       <div className="flex items-center space-x-6">
-        <h2>About</h2>
-        <h3>Dashboard</h3>
-        <h4>Sign in/Sign up</h4>
+       <Link href="sign-up"> <h3 className='px-4 py-1 bg-[#1a1a1a] text-white text-sm font-medium rounded border-solid border-[1px]'>Dashboard</h3></Link>
+        <Link href="/sign-up"><h4 className='px-4 py-1 bg-[#3CFF9C] text-black text-sm font-medium rounded border-solid border-[1px]'>Sign in/Sign up</h4></Link>
         <Link href="https://github.com/MattTorrSuarr/Evograph" target="_blank" rel="noopener noreferrer">
-<Image src={gbimg} alt="" width={32} height={32} className="w-8 h-8" /></Link>
+<Image src={gbimg} alt="" width={32} height={32}  className="w-8 h-8 filter brightness-0 invert" /></Link>
       </div>
           </div>
       <div className="font-normal border-b border-[#2E2E2E] w-full mt-1 "></div>
-      <div className="mt-10 ml-10">
-        <p className="flex items-center justify-center bg-[#191919] text-[13px]  font-bold w-[200px] h-[30px] text-white  rounded-[20px] ">edncrj ejjed ejff ejjedjd </p>
-        <h4 className="text-[80px] font-bold">e ef ejjedjd ejccee <span className="text-[#3CFF9C]">ejjej</span> ejejjejee ejejeeejee ememeeefda</h4>
-        <p className="text-[25px] font-normal">ednedncrj ejjed jejs cejff ejjej ejejjejee ejejeeejee ememeeefdaejjejee ejejeeejee ememeeefda</p>
+      <div className=" ml-10">
+        <p className="flex items-center justify-center bg-[#191919] text-[13px]  font-bold w-[200px] h-[30px] text-white  rounded-[20px] mt-[100px] ">edncrj ejjed ejff ejjedjd </p>
+        <h4 className="text-[80px] font-bold max-w-[1100px]">e ef ejjedjd ejccee <span className="text-[#3CFF9C]">ejjej</span> ejejjejee ejejeeejee ememeeefda</h4>
+        <p className="text-[25px] font-normal mt-10">ednedncrj ejjed jejs cejff ejjej ejejjejee ejejeeejee ememeeefdaejjejee ejejeeejee ememeeefda</p>
   <Link href="/dashboard">
-  <button className="mt-10 font-bold bg-[#3CFF9C] text-black h-[40px] w-[120px] rounded-[20px]">
-    get started
+  <button className="mt-10 font-bold bg-[#3CFF9C] text-black h-[50px] w-[200px] rounded-[50px]">
+    get startedx|
   </button>
 </Link>
+   </div>
+   <div className='absolute bottom-0 left-0 w-full flex flex-col items-center justify-center text-white border-t h-[120px] '>
+<h1>Evograph</h1>
+<p>Crete graphs with <span className='text-[#3CFF9C]'>purpose</span></p>
    </div>
 
       
