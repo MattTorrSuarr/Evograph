@@ -29,7 +29,7 @@ export default function Home() {
           </div>
       <div className="font-normal border-b border-[#2E2E2E] w-full mt-1 "></div>
       <div className="mt-10 ml-10">
-        <p className="flex items-center justify-center bg-[#121212] text-[13px]  font-bold w-[200px] h-[30px] text-white  rounded-[20px] ">edncrj ejjed ejff ejjedjd </p>
+        <p className="flex items-center justify-center bg-[#191919] text-[13px]  font-bold w-[200px] h-[30px] text-white  rounded-[20px] ">edncrj ejjed ejff ejjedjd </p>
         <h4 className="text-[80px] font-bold">e ef ejjedjd ejccee <span className="text-[#3CFF9C]">ejjej</span> ejejjejee ejejeeejee ememeeefda</h4>
         <p className="text-[25px] font-normal">ednedncrj ejjed jejs cejff ejjej ejejjejee ejejeeejee ememeeefdaejjejee ejejeeejee ememeeefda</p>
   <Link href="/dashboard">
