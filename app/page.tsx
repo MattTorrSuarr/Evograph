@@ -20,8 +20,8 @@ export default function Home() {
         <h1 className="font-semibold text-[40px]">Evograph</h1>
       </div>
       <div className="flex items-center space-x-6">
-       <Link href="sign-up"> <h3 className='px-4 py-1 bg-[#1a1a1a] text-white text-sm font-medium rounded border-solid border-[1px]'>Dashboard</h3></Link>
-        <Link href="/sign-up"><h4 className='px-4 py-1 bg-[#3CFF9C] text-black text-sm font-medium rounded border-solid border-[1px]'>Sign in/Sign up</h4></Link>
+       <Link href="/test"> <h3 className='px-4 py-1 bg-[#1a1a1a] text-white text-sm font-medium rounded border-solid border-[1px]'>Dashboard</h3></Link>
+        <Link href="/test"><h4 className='px-4 py-1 bg-[#3CFF9C] text-black text-sm font-medium rounded border-solid border-[1px]'>Sign in/Sign up</h4></Link>
         <Link href="https://github.com/MattTorrSuarr/Evograph" target="_blank" rel="noopener noreferrer">
 <Image src={gbimg} alt="" width={32} height={32}  className="w-8 h-8 filter brightness-0 invert" /></Link>
       </div>

@@ -1,39 +1,37 @@
-import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import { ThemeProvider } from "next-themes";
-import "./globals.css";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
+import type React from "react"
+import type { Metadata } from "next"
+import { Geist } from "next/font/google"
+import { ThemeProvider } from "next-themes"
+import { Suspense } from "react"
+import "./globals.css"
 
-const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+const defaultUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   title: "Next.js and Supabase Starter Kit",
   description: "The fastest way to build apps with Next.js and Supabase",
-};
+  generator: "v0.app",
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   display: "swap",
   subsets: ["latin"],
-});
+})
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children} {/* landing page, nested dashboard layout, etc. */}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Suspense fallback={null}>{children}</Suspense>
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

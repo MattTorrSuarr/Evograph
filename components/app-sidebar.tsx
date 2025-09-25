@@ -1,57 +1,64 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+  import Image from "next/image"
+  import { Calendar, Home, Inbox, Search, Settings, Plus, Folders } from "lucide-react"
 
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/components/ui/sidebar"
+  import {
+    Sidebar,
+    SidebarContent,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+  } from "@/components/ui/sidebar"
 
-// Menu items.
-const items = [
-  {
-    title: "Home",
-    url: "#",
-    icon: Home,
-  },
-  {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
-]
+  // Menu items.
+  const items = [
+    {
+      title: "New graph",
+      url: "#",
+      icon: Plus,
+    },
+    {
+      title: "Progects",
+      url: "#",
+      icon: Folders,
+    },
+  
+    {
+      title: "Recent",
+      url: "#",
+      icon: "Search",
+    },
+    {
+      title: "Settings",
+      url: "#",
+      icon: Settings,
+    },
+  ]
 
-export function AppSidebar() {
+  export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/icon.png"
+                alt="Evograph Logo"
+                width={24}
+                height={24}
+              />
+              <span>Evograph</span>
+            </div>
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <a href={item.url} className="flex items-center gap-2">
                       <item.icon />
                       <span>{item.title}</span>
                     </a>
